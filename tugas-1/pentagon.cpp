@@ -1,9 +1,16 @@
 /*
  * GL01Hello.cpp: Test OpenGL C/C++ Setup
  */
-#include <windows.h>  // For MS Windows
-#include <GL/glut.h>  // GLUT, includes glu.h and gl.h
- 
+//#include <windows.h>  // For MS Windows
+//#include <glut.h>  // GLUT, includes glu.h and gl.h
+
+
+
+//For Macbook: - comment if in another OS
+#include <OpenGL/gl.h>
+#include <OpenGl/glu.h>
+#include <GLUT/glut.h>
+
 /* Handler for window-repaint event. Call back when the window first appears and
    whenever the window needs to be re-painted. */
 void display() {
@@ -12,13 +19,19 @@ void display() {
  
    // Draw a Red 1x1 Square centered at origin
    glBegin(GL_POLYGON);              // Each set of 4 vertices form a quad // bisa diubah jadi GL_QUADS, GL_TRIANGLES, dll
-      glColor3f(1.0f, 0.0f, 0.0f); // Red
-      glVertex2f(-0.2f, -0.3f);    // x, y // harus dalam urutan vertex yg benar
-      
+      glColor3f(0.0f, 0.0f, 1.0f); // Red
+      glVertex2f(-0.2f, -0.5f);    // x, y // harus dalam urutan vertex yg benar
       glVertex2f( 0.4f, -0.5f);
-      glVertex2f(0.7f, 0.0f);
-      glVertex2f( 0.4f,  0.5f);
-      glVertex2f(-0.2f,  0.3f);
+      glVertex2f(0.6f, 0.0f);
+      glVertex2f( 0.1f,  0.45f);
+      glVertex2f(-0.4f,  0.0f);
+  
+//      glColor3f(0.0f, 0.0f, 1.0f); // Red
+//      glVertex2f(-0.2f, -0.5f);    // x, y // harus dalam urutan vertex yg benar
+//      glVertex2f( 0.4f, -0.5f);
+//      glVertex2f(0.6f, 0.0f);
+//      glVertex2f( 0.1f,  0.45f);
+//      glVertex2f(-0.4f,  0.0f);
       
    glEnd();
 
