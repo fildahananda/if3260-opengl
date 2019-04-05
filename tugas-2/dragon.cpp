@@ -131,6 +131,15 @@ int main(void)
 		0.5f, -0.05f, 0.0f, //7
 		0.3f, 0.0f, 0.0f,
 		0.3f, -0.1f, 0.0f,
+		0.2f, 0.3f, 0.0f, // pentagon
+		0.4f, 0.9f, 0.0f,
+		0.6f, 0.3f, 0.0f,
+		0.2f, 0.3f, 0.0f,
+		0.4f, 0.9f, 0.0f,
+		0.1f, 0.65f, 0.0f,
+		0.7f, 0.65f, 0.0f,
+		0.4f, 0.9f, 0.0f,
+		0.6f, 0.3f, 0.0f,
 	};
 
 	static const GLfloat g_color_buffer_data[] = {
@@ -200,6 +209,15 @@ int main(void)
 		0.583f,  0.771f,  0.014f, //7
 		0.609f,  0.115f,  0.436f,
 		0.327f,  0.483f,  0.844f,
+		0.5f, 0.0f, 0.0f, // pentagon
+		0.5f, 0.0f, 0.0f,
+		0.5f, 0.0f, 0.0f,
+		0.0f, 0.1f, 0.0f,
+		0.0f, 0.4f, 0.0f,
+		0.0f, 0.3f, 0.0f,
+		0.0f, 0.0f, 0.6f,
+		0.0f, 0.0f, 0.7f,
+		0.0f, 0.0f, 0.8f,
 	};
 
 	GLuint vertexbuffer;
@@ -245,7 +263,7 @@ int main(void)
 		);
 
 		// Draw the triangle !
-		glDrawArrays(GL_TRIANGLES, 0, 22*3); // 3 indices starting at 0 -> 1 triangle
+		glDrawArrays(GL_TRIANGLES, 0, 25*3); // 3 indices starting at 0 -> 1 triangle
 
 		glDisableVertexAttribArray(0);
 
